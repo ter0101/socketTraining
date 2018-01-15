@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MFU@ IT School Smart Dispay</title>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <style>
+        body {
+            font-family: "Raleway", Arial, sans-serif
+        }
+
+        .w3-row img {
+            margin-bottom: -8px
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                var data = $(this).val();
+                console.log(data);
+                socket.emit("changeVDO", { msg: data });
+            });
+        });
+
+    </script>
+
+    <script>
+        $(function () {
+            socket.on("changeV", function (data) {
+                var vdoid = data.msg;
+                var vdourl = "https://www.youtube.com/embed/";
+                vdourl += vdoid + "?autoplay=1&loop=1";
+                $("#youplay").attr("src", vdourl);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="w3-content" style="max-width:1500px">
+        <!-- Header -->
+        <header class="w3-container w3-xlarge w3-padding-24">
+            <p class="w3-left w3-button w3-white">My Socket Training</p>
+        </header>
+
+        <!-- VDO -->
+        <div class="container">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" id="youplay" src="https://www.youtube.com/embed/85Z4xt_Ec8E?autoplay=1&loop=1"></iframe>
+            </div>
+        </div>
+
+        <!-- hr -->
+        <hr style="border-top:3px solid #000">
+
+        <!-- Button -->
+        <div id="screen_panel">
+            <!-- Photo Grid -->
+            <h2>Jsut for you</h2>
+            <div class="w3-content" style="max-width:800px"> 
+                <div class="w3-row">
+                    <div class="w3-half">
+                        <button value="J_ub7Etch2U">
+                            <img src="https://img.youtube.com/vi/J_ub7Etch2U/hqdefault.jpg" style="width:100%">
+                        </button>
+                        <button value="nZ6Vk--vRwM">
+                            <img src="https://img.youtube.com/vi/nZ6Vk--vRwM/hqdefault.jpg" style="width:100%">
+                        </button>
+                        <button value="gOE2BVRCUkM">
+                            <img src="https://img.youtube.com/vi/gOE2BVRCUkM/hqdefault.jpg" style="width:100%">
+                        </button>
+                        <button value="K4zm30yeHHE">
+                            <img src="https://img.youtube.com/vi/K4zm30yeHHE/hqdefault.jpg" style="width:100%">
+                        </button>
+                    </div>
+
+                    <div class="w3-half">
+                        <button value="oy9d3SJzHwQ">
+                            <img src="https://img.youtube.com/vi/oy9d3SJzHwQ/hqdefault.jpg" style="width:100%">
+                        </button>
+                        <button value="HnpwAgIbsMY">
+                            <img src="https://img.youtube.com/vi/HnpwAgIbsMY/hqdefault.jpg" style="width:100%">
+                        </button>
+                        <button value="WxVMNhqVSAI">
+                            <img src="https://img.youtube.com/vi/WxVMNhqVSAI/hqdefault.jpg" style="width:100%">
+                        </button>
+                        <button value="YXMk26LAg24">
+                            <img src="https://img.youtube.com/vi/YXMk26LAg24/hqdefault.jpg" style="width:100%">
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
