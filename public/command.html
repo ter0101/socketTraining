@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -33,8 +34,8 @@
 
     <script>
         $(function () {
-            $("button").click(function () {
-                var data = $(this).val();
+            $("img").click(function () {
+                var data = $(this).attr("alt");
                 console.log(data);
                 socket.emit("changeVDO", { msg: data });
             });
@@ -75,37 +76,32 @@
         <!-- Button -->
         <div id="screen_panel">
             <!-- Photo Grid -->
-            <h2>Jsut for you</h2>
-            <div class="w3-content" style="max-width:800px"> 
+            <h2>Just for you</h2>
+            <div class="w3-content" style="max-width:800px">
                 <div class="w3-row">
                     <div class="w3-half">
-                        <button value="J_ub7Etch2U">
-                            <img src="https://img.youtube.com/vi/J_ub7Etch2U/hqdefault.jpg" style="width:100%">
-                        </button>
-                        <button value="nZ6Vk--vRwM">
-                            <img src="https://img.youtube.com/vi/nZ6Vk--vRwM/hqdefault.jpg" style="width:100%">
-                        </button>
-                        <button value="gOE2BVRCUkM">
-                            <img src="https://img.youtube.com/vi/gOE2BVRCUkM/hqdefault.jpg" style="width:100%">
-                        </button>
-                        <button value="K4zm30yeHHE">
-                            <img src="https://img.youtube.com/vi/K4zm30yeHHE/hqdefault.jpg" style="width:100%">
-                        </button>
+
+
+                        <img alt="4q40_CsS1A8" src="https://img.youtube.com/vi/4q40_CsS1A8/hqdefault.jpg">
+
+                        <img alt="mUCiOQTPYT8" src="https://img.youtube.com/vi/mUCiOQTPYT8/hqdefault.jpg">
+
+                        <img alt="gOE2BVRCUkM" src="https://img.youtube.com/vi/gOE2BVRCUkM/hqdefault.jpg">
+
+                        <img alt="K4zm30yeHHE" src="https://img.youtube.com/vi/K4zm30yeHHE/hqdefault.jpg">
+
                     </div>
 
                     <div class="w3-half">
-                        <button value="oy9d3SJzHwQ">
-                            <img src="https://img.youtube.com/vi/oy9d3SJzHwQ/hqdefault.jpg" style="width:100%">
-                        </button>
-                        <button value="HnpwAgIbsMY">
-                            <img src="https://img.youtube.com/vi/HnpwAgIbsMY/hqdefault.jpg" style="width:100%">
-                        </button>
-                        <button value="WxVMNhqVSAI">
-                            <img src="https://img.youtube.com/vi/WxVMNhqVSAI/hqdefault.jpg" style="width:100%">
-                        </button>
-                        <button value="YXMk26LAg24">
-                            <img src="https://img.youtube.com/vi/YXMk26LAg24/hqdefault.jpg" style="width:100%">
-                        </button>
+
+                        <img alt="oy9d3SJzHwQ" src="https://img.youtube.com/vi/oy9d3SJzHwQ/hqdefault.jpg">
+
+                        <img alt="HnpwAgIbsMY" src="https://img.youtube.com/vi/HnpwAgIbsMY/hqdefault.jpg">
+
+                        <img alt="WxVMNhqVSAI" src="https://img.youtube.com/vi/WxVMNhqVSAI/hqdefault.jpg">
+
+                        <img alt="YXMk26LAg24" src="https://img.youtube.com/vi/YXMk26LAg24/hqdefault.jpg">
+
                     </div>
 
                 </div>
